@@ -38,7 +38,7 @@ def index():
 
     # Query the database for completions on the selected date and extract the habit names
     completions = [
-        habit["habit"],
+        habit["habit"]
         for habit in current_app.db.completions.find({"date": selected_date})
     ]
     # Render the index template with the queried data
